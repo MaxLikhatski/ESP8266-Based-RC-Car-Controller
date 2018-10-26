@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title></title>
+<meta charset="utf-8">
+<style>
+	button{
+		width: 220px;
+		height: 170px;
+	}
+</style>
+</head>
+<body>
+<script>
+function sleep_ms(millis){
+	var t = (new Date()).getTime();
+	var i = 0;
+	while ((new Date()).getTime()-t<millis){
+		i++;
+	}
+}
+
+function left(){
+	http = new XMLHttpRequest();
+	http.open('GET','LEFT',true);
+	http.send();
+	sleep_ms(100);
+	http.open('GET','LEFT',true);
+	http.send();
+	sleep_ms(100);
+	http.open('GET','LEFT',true);
+	http.send();
+}
+
+function stop(){
+	http = new XMLHttpRequest();
+	http.open('GET','STOP',true);
+	http.send();
+	sleep_ms(100);
+	http.open('GET','STOP',true);
+	http.send();
+	sleep_ms(100);
+	http.open('GET','STOP',true);
+	http.send();
+}
+
+</script>
+<form>
+<button style="vertical-align:middle" ontouchstart="left()" ontouchend="stop()" value="Налево"></button>
+</form>
+</body>
+</html>
