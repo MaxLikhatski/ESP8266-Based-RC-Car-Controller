@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title></title>
+<meta charset="utf-8">
+<style>
+	button{
+		width: 180px;
+		height: 170px;
+	}
+</style>
+</head>
+<body>
+<script>
+function sleep_ms(millis){
+	var t = (new Date()).getTime();
+	var i = 0;
+	while ((new Date()).getTime()-t<millis){
+		i++;
+	}
+}
+
+function forward(){
+	var Http = new XMLHttpRequest();
+	Http.open('GET','FORWARD',true);
+	Http.send();
+	sleep_ms(100);
+	Http.open('GET','FORWARD',true);
+	Http.send();
+	sleep_ms(100);
+	Http.open('GET','FORWARD',true);
+	Http.send();
+}
+
+function stop(){
+	var Http = new XMLHttpRequest();
+	Http.open('GET','STOP',true);
+	Http.send();
+	sleep_ms(100);
+	Http.open('GET','STOP',true);
+	Http.send();
+	sleep_ms(100);
+	Http.open('GET','STOP',true);
+	Http.send();
+}
+</script>
+<form>
+<button style="vertical-align:middle" ontouchstart="forward()" ontouchend="stop()" value="Вперёд"></button>
+</form>
+</body>
+</html>

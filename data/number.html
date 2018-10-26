@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.pwm{
+			width: 200px;
+		}
+	</style>
+	<script type="text/javascript">
+		function sendPWMValue(){
+			var body = document.getElementById("pwm").value;
+			http = new XMLHttpRequest();
+			http.open('POST','PWMDATA',true);
+			http.setRequestHeader('Content-Type','text/plain');
+			http.send(body);
+		}
+	</script>
+</head>
+<body>
+	<input type="range" name="pwm" min="0" max="100" step="1" value="50" class="pwm" id="pwm" onchange="sendPWMValue()">
+</body>
+</html>
