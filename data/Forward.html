@@ -4,9 +4,10 @@
 <title></title>
 <meta charset="utf-8">
 <style>
-	button{
+	.btnFor{
 		width: 180px;
 		height: 170px;
+		font-size: 20pt;
 	}
 </style>
 </head>
@@ -45,7 +46,7 @@ function stop(){
 }
 </script>
 <form>
-<button style="vertical-align:middle" ontouchstart="forward()" ontouchend="stop()" value="Вперёд"></button>
+<input type="button" class="btnFor" ontouchstart="forward()" ontouchend="stop()" value="Вперёд" />
 </form>
 </body>
 </html>
