@@ -1,0 +1,1 @@
+Files in this folder is to be uploaded into ESP8266 Flash after the sketch upload.
