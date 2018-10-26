@@ -4,9 +4,10 @@
 <title></title>
 <meta charset="utf-8">
 <style>
-	button{
+	.btnRight{
 		width: 220px;
 		height: 170px;
+		font-size: 20pt;
 	}
 </style>
 </head>
@@ -45,7 +46,7 @@ function stop(){
 }
 </script>
 <form>
-<button style="vertical-align:middle" onmousedown="right()" onmouseup="stop()" value="Turn right"></button>
+<input type="button" class="btnRight" onmousedown="right()" onmouseup="stop()" value="Turn right" />
 </form>
 </body>
 </html>
